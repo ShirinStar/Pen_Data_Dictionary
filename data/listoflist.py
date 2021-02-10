@@ -16,7 +16,7 @@ def gen_subsets(rel):
   return sets
 
 def build_counts(): 
-  f = open("/Users/shirin/other_projects/cooper_hewitt/Pen_Data_Dictionary/Pen_Data_Dictionary/data/visitsItems_listevening.txt", "r")
+  f = open("/Users/shirin/other_projects/cooper_hewitt/Pen_Data_Dictionary/Pen_Data_Dictionary/data/listoflist_fixHours.txt", "r")
   data = json.loads(f.read())
   relation_counts = {}
   ctr = 0
@@ -38,14 +38,14 @@ def build_counts():
   print("before sorting")
   answer = dict(sorted(relation_counts.items(), key=lambda item: item[1]))
   print("before pickling")
-  f = open("/Users/shirin/other_projects/cooper_hewitt/Pen_Data_Dictionary/relation_counts_eveningTime.json", "wb")
+  f = open("/Users/shirin/other_projects/cooper_hewitt/Pen_Data_Dictionary/relation_counts_fixHours.json", "wb")
   pickle.dump(answer, f)
   f.close()
   import pdb; pdb.set_trace()
 
 
 def get_counts():
-  f = open("/Users/shirin/relation_counts.json", "rb")
+  f = open("/Users/shirin/relation_counts_fixHours.json", "rb")
   data = pickle.load(f)
   f.close()
 
