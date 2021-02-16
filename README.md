@@ -1,1 +1,1 @@
-# The Pen Project// Cooper Hewitt
+# The Pen Project | Cooper Hewitt
